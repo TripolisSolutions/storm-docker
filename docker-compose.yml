@@ -1,14 +1,14 @@
 zookeeper:
   image: wurstmeister/zookeeper
   ports: 
-    - "49181:2181"
+    - "2181:2181"
     - "22"
 nimbus:
   image: wurstmeister/storm-nimbus
   ports:
-    - "49773:3773"
-    - "49772:3772"
-    - "49627:6627"
+    - "3773:3773"
+    - "3772:3772"
+    - "6627:6627"
     - "22"
   links: 
     - zookeeper:zk
